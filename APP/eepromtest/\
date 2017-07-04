@@ -1,0 +1,229 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <byteswap.h>
+#include <wiringPi.h>
+#include <wiringPiI2C.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <linux/fs.h>
+#include <sys/types.h>
+#include <sys/ioctl.h>
+#include <errno.h>
+#include <assert.h>
+#include <string.h>
+
+
+struct eeprom
+{
+        char *dev;      // device file i.e. /dev/i2c-N
+        int addr;       // i2c address
+        int fd;         // file descriptor
+        int write_cycle_time;
+};
+
+
+#if 0
+int write_to_eeprom_from_array(struct eeprom *e,int addr)
+{
+        int i;
+        unsigned short data;
+
+        len = sizeof(DataRISH)/sizeof(DataRISH[0]);
+        printf("array len is %d\n",len);
+        for(i=0;i<len;i++) {
+                data = DataRISH[i] ;
+                //printf("data  0x%x\n",data);
+                die_if(eeprom_write_byte(e, addr++, (data >> 8)), "write error");
+                die_if(eeprom_write_byte(e, addr++, data), "write error");
+        }
+        print_info("\n\n");
+        return 0;
+}
+
+static int read_from_eeprom(struct eeprom *e, FILE *fp, int addr, int size, int hex)
+{
+        int ch, i;
+        unsigned short value= 0x0;
+        int row = 0;
+        int col = 0;
+        char buf[MAXLEN];
+
+        printf("Redaing from eeprom %d %d \n",addr,size);
+
+        while(row < (VOL_MAX_STEP-2))
+        {
+                value = 0x0;
+                die_if((ch = eeprom_read_byte(e, addr++)) < 0, "read error");
+                value = (ch << 8) | value;
+                die_if((ch = eeprom_read_byte(e, addr++)) < 0, "read error");
+                value = value | ch;
+                //printf("the read value is 0x%x  row %d col %d  \n",value,row,col);
+                if(row == 0) {
+                        switch(col) {
+                                case 0:
+                                                ldrattn.potImpedence = value;
+                                                col++;
+                                                break;
+                                case 1:
+                                                ldrattn.calibSteps = value;
+                                                col++;
+                                                break;
+                                case 2:
+                                                ldrattn.ldrTemp = value;
+                                                col = 0;
+                                                row++;
+                                                break;
+
+                        }
+
+                } else {
+                        switch(col) {
+
+                                case 0: ldrattn.dataR[row].pw_SE = value;
+                                break;
+                                case 1: ldrattn.dataR[row].pw_SH = value;
+                                break;
+                                case 2: ldrattn.dataR[row].i_SE = value;
+                                break;
+                                case 3: ldrattn.dataR[row].i_SH = value;
+                                break;
+                                case 4: ldrattn.dataL[row].pw_SE = value;
+                                break;
+                                case 5: ldrattn.dataL[row].pw_SH = value;
+                                break;
+                                case 6: ldrattn.dataL[row].i_SE = value;
+                                break;
+                                case 7: ldrattn.dataL[row].i_SH = value;
+                                break;
+                                case 8: ldrattn.targetres[row].series = value;
+                        break;
+                                case 9: ldrattn.targetres[row].shunt = value;
+                        break;
+
+                        }
+                        if(col >= MAXFIELDS) {
+                                col = 0;
+                                //i = row;
+                        //printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,\n",ldrattn.dataR[i].pw_SE,ldrattn.dataR[i].pw_SH,ldrattn.dataR[i].i_SE,ldrattn.dataR[i].i_SH,ldrattn.dataL[i].pw_SE,ldrattn.dataL[i].pw_SH,ldrattn.dataL[i].i_SE,ldrattn.dataL[i].i_SH,ldrattn.targetres[i].series,ldrattn.targetres[i].shunt);
+                        row++;
+                        } else
+                                col++;
+                }
+
+        }
+
+        printf(" writing to file num of rows %d \n",row);
+
+        sleep(1);
+        memset(buf,'\0',MAXLEN);
+        sprintf(buf,"%d,%d,%d,\n",ldrattn.potImpedence,ldrattn.calibSteps,ldrattn.ldrTemp);
+        printf("%d,%d,%d,\n",ldrattn.potImpedence,ldrattn.calibSteps,ldrattn.ldrTemp);
+        fwrite(buf,sizeof(buf),1,fp);
+        //printf(" %s\n",buf);
+        for(i =1 ;i < (row-1);i++) {
+                memset(buf,'\0',MAXLEN);
+                sprintf(buf,"%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,\n",ldrattn.dataR[i].pw_SE,ldrattn.dataR[i].pw_SH,ldrattn.dataR[i].i_SE,ldrattn.dataR[i].i_SH,ldrattn.dataL[i].pw_SE,ldrattn.dataL[i].pw_SH,ldrattn.dataL[i].i_SE,ldrattn.dataL[i].i_SH,ldrattn.targetres[i].series,ldrattn.targetres[i].shunt);
+                fwrite(buf,sizeof(buf),1,fp);
+                //printf(" %s\n",buf);
+//              printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,\n",ldrattn.dataR[i].pw_SE,ldrattn.dataR[i].pw_SH,ldrattn.dataR[i].i_SE,ldrattn.dataR[i].i_SH,ldrattn.dataL[i].pw_SE,ldrattn.dataL[i].pw_SH,ldrattn.dataL[i].i_SE,ldrattn.dataL[i].i_SH,ldrattn.targetres[i].series,ldrattn.targetres[i].shunt);
+        }
+
+        fflush(fp);
+        return 0;
+}
+#endif
+int eeprom_write_byte(struct eeprom *e, unsigned short mem_addr, char data)
+{
+	
+	char reg;
+	unsigned short value;
+	int ret;
+	
+	reg = (mem_addr >> 8) & 0x00ff;
+	value = mem_addr & 0x00ff;	
+	value = (data << 8) | value;
+
+	ret = wiringPiI2CWriteReg16(e->fd,reg,value);
+	if(ret < 0) {
+		printf("error while write data to eeprom\n");
+	}
+	usleep(10);
+	return ret;	
+
+}
+
+int eeprom_read_byte(struct eeprom *e, unsigned short mem_addr)
+{
+	char reg;
+	char value;
+	int ret;
+
+	ioctl(e->fd, BLKFLSBUF);
+		
+	reg = (mem_addr >> 8) & 0x0ff;
+	value = mem_addr & 0x0ff;
+	sleep(1);	
+	//ret = wiringPiI2CWriteReg8(e->fd,reg,value);
+	ret = wiringPiI2CWriteReg8(e->fd,0x0,0x0);
+	if(ret < 0) {
+		printf("error while write addr to eeprom\n");
+		return ret; 
+	}
+	usleep(10);	
+	ret = wiringPiI2CRead(e->fd);
+	printf("the read data is 0x%x\n",ret);
+	return ret;
+ 
+}
+
+
+
+int eeprom_close(struct eeprom *e)
+{
+
+	e->fd = -1;
+	e->dev = 0;
+	return 1;
+}
+
+int eeprom_open (char *dev,int i2cAddr,struct eeprom *e,int write_cycle_time)
+{
+	int fd;
+
+	if ((fd = wiringPiI2CSetup (i2cAddr)) < 0) {
+		printf("error opening the eeprom device\n");
+		return 0;
+	}
+	
+	e->fd = fd;
+	e->addr = i2cAddr;
+	e->dev = dev;
+	e->write_cycle_time = write_cycle_time;	
+
+	return 1;
+}
+
+#if 1
+int main()
+{
+    int data;
+	struct eeprom e;
+	int ret;
+
+	wiringPiSetup () ;
+	ret =  eeprom_open("/dev/i2c-2",0x57,&e,3);		
+	if(!ret)
+		return 1;
+	
+	eeprom_write_byte(&e,0x0,0xda);
+	eeprom_read_byte(&e,0x0);
+	eeprom_close(&e);		
+
+	
+	return 1;
+
+}
+#endif
+
+

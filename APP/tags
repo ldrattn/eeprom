@@ -1,0 +1,379 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACTIONDEF_H	actiondef.h	3;"	d
+ACTION_H	action.h	6;"	d
+ADC1_I2C_ADDR	action.h	88;"	d
+ADC1_PIN_BASE	action.h	86;"	d
+ADC2_I2C_ADDR	action.h	89;"	d
+ADC2_PIN_BASE	action.h	87;"	d
+ADC_CHAN1	action.h	91;"	d
+ADC_CHAN2	action.h	92;"	d
+ADC_CHAN3	action.h	93;"	d
+ADC_CHAN4	action.h	94;"	d
+ADC_CHAN5	action.h	95;"	d
+ADC_CHAN6	action.h	96;"	d
+ADDR_OFFSET	ldrattnapp.h	20;"	d
+APP	Makefile	/^APP =  ldrattnapp$/;"	m
+AR	Makefile	/^AR=ar$/;"	m
+BALANCE_UPDATE	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+BINPATH	Makefile	/^BINPATH=\/usr\/local\/sbin$/;"	m
+BalanceChan	common.h	/^typedef enum { LEFTCHAN, RIGHTCHAN } BalanceChan;$/;"	t	typeref:enum:__anon12
+CALIBRATED	ldrattnapp.h	/^typedef enum { CALIBRATED, NOTCALIBRATED } Calibstate;$/;"	e	enum:__anon2
+CALIB_FAILED	ldrattnapp.h	/^typedef enum { CALIB_NONE, CALIB_ONGOING,CALIB_SUCCESS,CALIB_FAILED} Calibstatus;$/;"	e	enum:__anon3
+CALIB_MAXSTEP	ldrattnapp.h	8;"	d
+CALIB_NONE	ldrattnapp.h	/^typedef enum { CALIB_NONE, CALIB_ONGOING,CALIB_SUCCESS,CALIB_FAILED} Calibstatus;$/;"	e	enum:__anon3
+CALIB_ONGOING	ldrattnapp.h	/^typedef enum { CALIB_NONE, CALIB_ONGOING,CALIB_SUCCESS,CALIB_FAILED} Calibstatus;$/;"	e	enum:__anon3
+CALIB_SAVE	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+CALIB_START	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+CALIB_STATUS	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+CALIB_STOP	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+CALIB_SUCCESS	ldrattnapp.h	/^typedef enum { CALIB_NONE, CALIB_ONGOING,CALIB_SUCCESS,CALIB_FAILED} Calibstatus;$/;"	e	enum:__anon3
+CC	Makefile	/^CC=gcc$/;"	m
+CFGPARSER_H	cfgparser.h	3;"	d
+CFLAGS	Makefile	/^CFLAGS = -Wall -g $/;"	m
+CHANNEL_1	ltc2655.h	5;"	d
+CHANNEL_2	ltc2655.h	6;"	d
+CHANNEL_3	ltc2655.h	7;"	d
+CHANNEL_4	ltc2655.h	8;"	d
+CHANNEL_ALL	ltc2655.h	4;"	d
+CLIENT	Makefile	/^CLIENT = client$/;"	m
+CMDLEN	ldrattnapp.c	28;"	d	file:
+COBJ	Makefile	/^COBJ = $(patsubst %,$(ODIR)\/%,$(_COBJ))$/;"	m
+CP	Makefile	/^CP=cp$/;"	m
+CRN_NONE	ldrattnapp.h	/^typedef enum { CRN_NONE, CRN_ONGOING} CRNstatus;$/;"	e	enum:__anon4
+CRN_ONGOING	ldrattnapp.h	/^typedef enum { CRN_NONE, CRN_ONGOING} CRNstatus;$/;"	e	enum:__anon4
+CRNstatus	ldrattnapp.h	/^typedef enum { CRN_NONE, CRN_ONGOING} CRNstatus;$/;"	t	typeref:enum:__anon4
+CSVFILE_HEADER	ldrattnapp.h	23;"	d
+CSVHEADER_LEN	ldrattnapp.h	16;"	d
+CSVPARSER_H	csvparser.h	2;"	d
+CSV_APPEND_NULL	csv.h	25;"	d
+CSV_COMMA	csv.h	35;"	d
+CSV_CR	csv.h	33;"	d
+CSV_EINVALID	csv.h	16;"	d
+CSV_EMPTY_IS_NULL	csv.h	26;"	d
+CSV_ENOMEM	csv.h	14;"	d
+CSV_EPARSE	csv.h	13;"	d
+CSV_ETOOBIG	csv.h	15;"	d
+CSV_FILEDS	ldrattnapp.h	22;"	d
+CSV_LF	csv.h	34;"	d
+CSV_MAJOR	csv.h	7;"	d
+CSV_MINOR	csv.h	8;"	d
+CSV_OFFSET	ldrattnapp.h	14;"	d
+CSV_QUOTE	csv.h	36;"	d
+CSV_RELEASE	csv.h	9;"	d
+CSV_REPALL_NL	csv.h	21;"	d
+CSV_SPACE	csv.h	32;"	d
+CSV_STRICT	csv.h	20;"	d
+CSV_STRICT_FINI	csv.h	22;"	d
+CSV_SUCCESS	csv.h	12;"	d
+CSV_TAB	csv.h	31;"	d
+Calibstate	ldrattnapp.h	/^typedef enum { CALIBRATED, NOTCALIBRATED } Calibstate;$/;"	t	typeref:enum:__anon2
+Calibstatus	ldrattnapp.h	/^typedef enum { CALIB_NONE, CALIB_ONGOING,CALIB_SUCCESS,CALIB_FAILED} Calibstatus;$/;"	t	typeref:enum:__anon3
+DAC_CHAN1	action.h	81;"	d
+DAC_CHAN2	action.h	82;"	d
+DAC_CHAN3	action.h	83;"	d
+DAC_CHAN4	action.h	84;"	d
+DAC_I2C_ADDR	action.h	80;"	d
+DATA_RATE_475	action.h	98;"	d
+DBMAX	ldrattnapp.h	6;"	d
+DEBUG	ldrattnapp.c	30;"	d	file:
+DEBUG_H	debug.h	3;"	d
+DEC_VOLUME	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+DEFAULT_BALANCE_VALUE_DB	common.h	4;"	d
+DEFAULT_CALIB_STEPS	common.h	3;"	d
+DEFAULT_IMPEDANCE	common.h	2;"	d
+DEFAULT_TEMPERATURE	common.h	5;"	d
+DEFAULT_VOLUME	common.h	1;"	d
+DELAY_LDR_STABLE	action.h	100;"	d
+DEPS	Makefile	/^DEPS = $(patsubst %,$(IDIR)\/%,$(_DEPS))$/;"	m
+DataRISH	eepromtest/eeprom.c	/^unsigned short DataRISH[] = { 9321,100,25,\\$/;"	v
+FALSE	ldrattnapp.h	91;"	d
+FALSE	ltc2655.h	22;"	d
+FIELD_BEGUN	libcsv.c	31;"	d	file:
+FIELD_MIGHT_HAVE_ENDED	libcsv.c	32;"	d	file:
+FIELD_NOT_BEGUN	libcsv.c	30;"	d	file:
+HEADER_LEN	ldrattnapp.h	13;"	d
+HEADER_OFFSET	ldrattnapp.h	12;"	d
+HIGH	action.h	22;"	d
+IMP_OFFSET	ldrattnapp.h	18;"	d
+INC_VOLUME	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+LDRATTNAPP_H	ldrattnapp.h	2;"	d
+LDRAttr	eepromtest/eeprom.c	/^}LDRAttr;$/;"	t	typeref:struct:__anon11	file:
+LDRAttr	ldrattnapp.h	/^}LDRAttr;$/;"	t	typeref:struct:__anon7
+LDRCmd	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	t	typeref:enum:__anon1	file:
+LDRConf	ldrattnapp.h	/^}LDRConf;$/;"	t	typeref:struct:__anon8
+LDR_CONF	cfgparser.c	/^char *LDR_CONF = "\/usr\/local\/etc\/ldrattn\/ldrattn.conf";$/;"	v
+LDR_FULL_MAX	action.h	10;"	d
+LDR_LOW_TOLERANCE	action.h	8;"	d
+LDR_LSE_MIN	action.h	49;"	d
+LDR_LSH_MIN	action.h	50;"	d
+LDR_R1	action.h	45;"	d
+LDR_R18	action.h	46;"	d
+LDR_RSE_MIN	action.h	51;"	d
+LDR_RSH_MIN	action.h	52;"	d
+LDR_VOLTAGE	action.h	44;"	d
+LDR_ZERO_MIN	action.h	9;"	d
+LDRdata	eepromtest/eeprom.c	/^} LDRdata;$/;"	t	typeref:struct:__anon9	file:
+LDRdata	ldrattnapp.h	/^} LDRdata;$/;"	t	typeref:struct:__anon5
+LDRfd	action.c	/^int LDRfd;$/;"	v
+LDRtargetres	eepromtest/eeprom.c	/^} LDRtargetres;$/;"	t	typeref:struct:__anon10	file:
+LDRtargetres	ldrattnapp.h	/^} LDRtargetres;$/;"	t	typeref:struct:__anon6
+LEFTCHAN	common.h	/^typedef enum { LEFTCHAN, RIGHTCHAN } BalanceChan;$/;"	e	enum:__anon12
+LIBCSV_H__	csv.h	2;"	d
+LIBS	Makefile	/^LIBS=-lm -lpthread -lwiringPi$/;"	m
+LOAD_IMPEDANCE	action.h	39;"	d
+LOCK_FILE	action.h	103;"	d
+LOGGER_H	logger.h	3;"	d
+LOG_TRACE	debug.c	/^void LOG_TRACE(int lvl, char *fmt, ... )$/;"	f
+LOW	action.h	23;"	d
+LTC2655_CMD_EXTERNAL_REF	ltc2655.h	19;"	d
+LTC2655_CMD_INTERNAL_REF	ltc2655.h	18;"	d
+LTC2655_CMD_PD_ALL	ltc2655.h	16;"	d
+LTC2655_CMD_PD_ALL	ltc2655.h	17;"	d
+LTC2655_CMD_PD_N	ltc2655.h	15;"	d
+LTC2655_CMD_UP_N	ltc2655.h	12;"	d
+LTC2655_CMD_WR_INPUT_N	ltc2655.h	11;"	d
+LTC2655_CMD_WR_UP_ALL	ltc2655.h	13;"	d
+LTC2655_CMD_WR_UP_N	ltc2655.h	14;"	d
+LTC2655_H	ltc2655.h	2;"	d
+MAXBUF	cfgparser.c	24;"	d	file:
+MAXFIELDS	eepromtest/eeprom.c	19;"	d	file:
+MAXLEN	client.c	14;"	d	file:
+MAXLEN	eepromtest/eeprom.c	18;"	d	file:
+MAXLEN	ldrattnapp.h	5;"	d
+MAX_ARG	ldrattnapp.c	29;"	d	file:
+MAX_BUF_LEN	csvparser.c	17;"	d	file:
+MAX_FIELDS	csvparser.c	16;"	d	file:
+MAX_LDR_INPUT	action.h	101;"	d
+MEM_BLK_SIZE	libcsv.c	44;"	d	file:
+MINARGS	client.c	15;"	d	file:
+MIN_VOLUME_STEPS	ldrattnapp.h	10;"	d
+MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
+MUTE	action.h	24;"	d
+MUTE	ldrattnapp.h	7;"	d
+MUTE_VOLUME	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+NOM_IMPEDANCE	action.h	38;"	d
+NOTCALIBRATED	ldrattnapp.h	/^typedef enum { CALIBRATED, NOTCALIBRATED } Calibstate;$/;"	e	enum:__anon2
+OBJ	Makefile	/^OBJ = $(patsubst %,$(ODIR)\/%,$(_OBJ))$/;"	m
+ODIR	Makefile	/^ODIR = obj$/;"	m
+OFF	action.h	20;"	d
+ON	action.h	19;"	d
+PGA_4V	action.h	97;"	d
+PIN_ADC_LSE	action.h	31;"	d
+PIN_ADC_LSH	action.h	32;"	d
+PIN_ADC_RSE	action.h	33;"	d
+PIN_ADC_RSH	action.h	34;"	d
+PIN_CALIB_L	action.h	35;"	d
+PIN_CALIB_R	action.h	36;"	d
+PIN_DAC_LSE	action.h	26;"	d
+PIN_DAC_LSH	action.h	27;"	d
+PIN_DAC_RSE	action.h	28;"	d
+PIN_DAC_RSH	action.h	29;"	d
+PSTFLG_OFFSET	ldrattnapp.h	17;"	d
+RELOAD_CONFIG	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+RIGHTCHAN	common.h	/^typedef enum { LEFTCHAN, RIGHTCHAN } BalanceChan;$/;"	e	enum:__anon12
+ROW_NOT_BEGUN	libcsv.c	29;"	d	file:
+SET_VOLUME	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+SIZE_MAX	libcsv.c	23;"	d	file:
+SOBJ	Makefile	/^SOBJ = $(patsubst %,$(ODIR)\/%,$(_SOBJ))$/;"	m
+SOCK_PATH	client.c	13;"	d	file:
+SOCK_PATH	ldrattnapp.c	27;"	d	file:
+STATIC	Makefile	/^STATIC=libcsv.a$/;"	m
+STEPS_OFFSET	ldrattnapp.h	19;"	d
+SUBMIT_FIELD	libcsv.c	47;"	d	file:
+SUBMIT_FIELD	libcsv.c	62;"	d	file:
+State	ldrattnapp.c	/^Calibstate State;$/;"	v
+TEMP_COMPENSATE	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+TRUE	ldrattnapp.h	90;"	d
+TRUE	ltc2655.h	21;"	d
+VOL_DEFAULT	action.h	41;"	d
+VOL_MAX_STEP	eepromtest/eeprom.c	17;"	d	file:
+VOL_MAX_STEP	ldrattnapp.h	4;"	d
+WRITE_CONFIG	client.c	/^typedef enum { CALIB_START,SET_VOLUME,RELOAD_CONFIG,CALIB_SAVE,BALANCE_UPDATE,TEMP_COMPENSATE,WRITE_CONFIG,MUTE_VOLUME,CALIB_STATUS,CALIB_STOP,INC_VOLUME,DEC_VOLUME} LDRCmd; $/;"	e	enum:__anon1	file:
+_COBJ	Makefile	/^_COBJ = client.o$/;"	m
+_DEPS	Makefile	/^_DEPS = debug.h $/;"	m
+_OBJ	Makefile	/^_OBJ = eeprom.o ltc2655.o debug.o action.o csvparser.o cfgparser.o logger.o ldrattnapp.o$/;"	m
+_SOBJ	Makefile	/^_SOBJ = libcsv.o$/;"	m
+addr	eepromtest/eeprom.c	/^        int addr;       \/\/ i2c address$/;"	m	struct:eeprom	file:
+attr	ldrattnapp.c	/^struct volumeattr attr;$/;"	v	typeref:struct:volumeattr
+balanceChan	ldrattnapp.h	/^	int balanceChan;$/;"	m	struct:volumeattr
+balanceChan	ldrattnapp.h	/^	unsigned int balanceChan; $/;"	m	struct:__anon8
+balanceValue	ldrattnapp.h	/^	int balanceValue;$/;"	m	struct:volumeattr
+balanceValue	ldrattnapp.h	/^	unsigned int balanceValue; $/;"	m	struct:__anon8
+balancechan	client.c	/^	unsigned int balancechan;$/;"	m	struct:ldrconf	file:
+balanceval	client.c	/^	unsigned int balanceval;$/;"	m	struct:ldrconf	file:
+blk_size	csv.h	/^  size_t blk_size;$/;"	m	struct:csv_parser
+calibSteps	eepromtest/eeprom.c	/^        unsigned short calibSteps;$/;"	m	struct:__anon11	file:
+calibSteps	ldrattnapp.h	/^	unsigned int calibSteps;$/;"	m	struct:__anon8
+calibSteps	ldrattnapp.h	/^	unsigned short calibSteps;$/;"	m	struct:__anon7
+calibStop	action.c	/^unsigned int calibStop;$/;"	v
+calibStop	ldrattnapp.c	/^unsigned int calibStop;$/;"	v
+calibThread	ldrattnapp.c	/^pthread_t calibThread;$/;"	v
+calibattr	ldrattnapp.h	/^struct calibattr {$/;"	s
+calibdata	ldrattnapp.c	/^struct calibattr calibdata;$/;"	v	typeref:struct:calibattr
+callback1	csvparser.c	/^void callback1 (void *s, size_t i, void *outfile) {$/;"	f
+closeLog	logger.c	/^void closeLog()$/;"	f
+cmdParser	ldrattnapp.c	/^static int cmdParser(char *clientcmd,int sockfd)$/;"	f	file:
+count	csvparser.c	/^unsigned int count;$/;"	v
+crnState	ldrattnapp.c	/^unsigned int crnState;$/;"	v
+csv_parser	csv.h	/^struct csv_parser {$/;"	s
+curImpedance	ldrattnapp.c	/^unsigned int curImpedance; \/\/curImpedance will be changed based on the callibrartion$/;"	v
+curVolume	ldrattnapp.c	/^unsigned int curVolume;$/;"	v
+dataL	eepromtest/eeprom.c	/^        LDRdata dataL[VOL_MAX_STEP - 2];$/;"	m	struct:__anon11	file:
+dataL	ldrattnapp.h	/^	LDRdata dataL[VOL_MAX_STEP - 2];$/;"	m	struct:__anon7
+dataR	eepromtest/eeprom.c	/^        LDRdata dataR[VOL_MAX_STEP - 2];$/;"	m	struct:__anon11	file:
+dataR	ldrattnapp.h	/^	LDRdata dataR[VOL_MAX_STEP - 2];$/;"	m	struct:__anon7
+db	csvparser.c	/^unsigned int db;$/;"	v
+debugLog	logger.c	/^void debugLog(int level,char *fmt,...)$/;"	f
+delim_char	csv.h	/^  unsigned char delim_char;$/;"	m	struct:csv_parser
+deltaCorrection	action.c	/^void deltaCorrection(struct volumeattr *attr)$/;"	f
+deltaStop	action.c	/^unsigned int deltaStop;$/;"	v
+deltaStop	ldrattnapp.c	/^unsigned int deltaStop;$/;"	v
+deltaTemp	ldrattnapp.h	/^	unsigned int deltaTemp; $/;"	m	struct:__anon8
+deltaThread	ldrattnapp.c	/^pthread_t deltaThread;$/;"	v
+dev	eepromtest/eeprom.c	/^        char *dev;      \/\/ device file i.e. \/dev\/i2c-N$/;"	m	struct:eeprom	file:
+die_if	eepromtest/eeprom.c	121;"	d	file:
+die_if3	eepromtest/eeprom.c	120;"	d	file:
+doCalibration	action.c	/^void * doCalibration(struct calibattr *calibdata) {$/;"	f
+doSelfTest	action.c	/^static int doSelfTest()$/;"	f	file:
+do_die_if	eepromtest/eeprom.c	/^static void do_die_if(int b, char* msg, int line, int exitcode)$/;"	f	file:
+eeprom	eepromtest/eeprom.c	/^struct eeprom$/;"	s	file:
+eeprom_close	eepromtest/eeprom.c	/^int eeprom_close(struct eeprom *e)$/;"	f
+eeprom_open	eeprom.c	/^int eeprom_open (char *dev,int i2cAddr)$/;"	f
+eeprom_open	eepromtest/eeprom.c	/^int eeprom_open (char *dev,int i2cAddr,struct eeprom *e,int write_cycle_time)$/;"	f
+eeprom_read_byte	eeprom.c	/^int eeprom_read_byte(int eepromfd, unsigned short mem_addr)$/;"	f
+eeprom_read_byte	eepromtest/eeprom.c	/^int eeprom_read_byte(struct eeprom *e, unsigned short mem_addr)$/;"	f
+eeprom_write_byte	eeprom.c	/^int eeprom_write_byte(int eepromfd, unsigned short mem_addr, char data)$/;"	f
+eeprom_write_byte	eepromtest/eeprom.c	/^int eeprom_write_byte(struct eeprom *e, unsigned short mem_addr, char data)$/;"	f
+eepromfd	ldrattnapp.c	/^int eepromfd;$/;"	v
+entry_buf	csv.h	/^  unsigned char * entry_buf;   \/* Entry buffer *\/$/;"	m	struct:csv_parser
+entry_pos	csv.h	/^  size_t entry_pos;   \/* Current position in entry_buf (and current size of entry) *\/$/;"	m	struct:csv_parser
+entry_size	csv.h	/^  size_t entry_size;  \/* Size of entry buffer *\/$/;"	m	struct:csv_parser
+fd	eepromtest/eeprom.c	/^        int fd;         \/\/ file descriptor$/;"	m	struct:eeprom	file:
+fd	ltc2655.c	/^int fd ;$/;"	v
+flag	csvparser.c	/^unsigned int flag;$/;"	v
+free_func	csv.h	/^  void (*free_func)(void *);$/;"	m	struct:csv_parser
+getAddr	eeprom.c	60;"	d	file:
+getAttFromStep	action.c	/^float getAttFromStep(float step) {$/;"	f
+getCSVFilename	csvparser.c	/^void getCSVFilename(unsigned int impedance,char *csvfile)$/;"	f
+getCSVFlag	eeprom.c	/^int getCSVFlag(int offset,char *csvheader)$/;"	f
+getDeltaI	action.c	/^char getDeltaI(int sample) {$/;"	f
+getILSE	action.c	/^unsigned int getILSE() {$/;"	f
+getILSH	action.c	/^unsigned int  getILSH() {$/;"	f
+getIRSE	action.c	/^unsigned int getIRSE() {$/;"	f
+getIRSH	action.c	/^unsigned int getIRSH() {$/;"	f
+getImpedance	eeprom.c	59;"	d	file:
+getRLSE	action.c	/^unsigned long getRLSE() {$/;"	f
+getRLSH	action.c	/^unsigned long getRLSH() {$/;"	f
+getRRSE	action.c	/^unsigned long getRRSE() {$/;"	f
+getRRSH	action.c	/^unsigned long getRRSH() {$/;"	f
+getResistance	action.c	/^unsigned long getResistance(int  measure_raw, int seriesLDRres, int refResistor) {$/;"	f
+getRxFromAttAndImp	action.c	/^unsigned long getRxFromAttAndImp(float att, unsigned long imp) {$/;"	f
+getRxFromAttAndRy	action.c	/^unsigned long getRxFromAttAndRy(float att, unsigned long ry) {$/;"	f
+getRyFromAttAndImp	action.c	/^unsigned long getRyFromAttAndImp(float att, unsigned long imp) {$/;"	f
+getRyFromAttAndRx	action.c	/^unsigned long getRyFromAttAndRx(float att, unsigned long rx) {$/;"	f
+getSample	action.c	/^unsigned int  getSample(int channel) {$/;"	f
+getSteps	eeprom.c	61;"	d	file:
+getTemperature	ldrattnapp.c	/^int getTemperature()$/;"	f
+getcsvlen	eeprom.c	62;"	d	file:
+header	ldrattnapp.c	/^char header[HEADER_LEN];$/;"	v
+i_SE	eepromtest/eeprom.c	/^        unsigned short i_SE;            \/\/ current series$/;"	m	struct:__anon9	file:
+i_SE	ldrattnapp.h	/^	unsigned short i_SE;            \/\/ current series $/;"	m	struct:__anon5
+i_SH	eepromtest/eeprom.c	/^        unsigned short i_SH;            \/\/ current shunt$/;"	m	struct:__anon9	file:
+i_SH	ldrattnapp.h	/^	unsigned short i_SH;            \/\/ current shunt$/;"	m	struct:__anon5
+impedance	client.c	/^	unsigned int impedance;$/;"	m	struct:ldrconf	file:
+impedance	ldrattnapp.h	/^	unsigned int impedance;$/;"	m	struct:__anon8
+impedance	ldrattnapp.h	/^	unsigned int impedance;$/;"	m	struct:calibattr
+initEEPROM	eeprom.c	/^int initEEPROM(int eepromfd) {$/;"	f
+initWiringPiDevices	action.c	/^int  initWiringPiDevices()$/;"	f
+is_space	csv.h	/^  int (*is_space)(unsigned char);$/;"	m	struct:csv_parser
+is_term	csv.h	/^  int (*is_term)(unsigned char);$/;"	m	struct:csv_parser
+ldrTemp	eepromtest/eeprom.c	/^        unsigned short ldrTemp;      \/\/$/;"	m	struct:__anon11	file:
+ldrTemp	ldrattnapp.h	/^	unsigned short ldrTemp;      \/\/$/;"	m	struct:__anon7
+ldrattn	action.c	/^LDRAttr ldrattn;$/;"	v
+ldrattn	csvparser.c	/^LDRAttr ldrattn;$/;"	v
+ldrattn	eepromtest/eeprom.c	/^LDRAttr ldrattn;$/;"	v
+ldrattn	ldrattnapp.c	/^LDRAttr ldrattn;$/;"	v
+ldrattn_t	action.c	/^LDRAttr ldrattn_t;$/;"	v
+ldrconf	cfgparser.c	/^LDRConf ldrconf;$/;"	v
+ldrconf	client.c	/^struct ldrconf {$/;"	s	file:
+ldrconf	csvparser.c	/^LDRConf ldrconf;$/;"	v
+ldrconf	ldrattnapp.c	/^LDRConf ldrconf;$/;"	v
+len	eeprom.c	/^unsigned int len;$/;"	v
+len	eepromtest/eeprom.c	/^unsigned int len;$/;"	v
+loadDefParams	cfgparser.c	/^void loadDefParams()$/;"	f
+ltc2655Setup	ltc2655.c	/^int ltc2655Setup (int i2cAddr)$/;"	f
+main	client.c	/^int main(int argc,char *argv[])$/;"	f
+main	eepromtest/eeprom.c	/^int main()$/;"	f
+main	ldrattnapp.c	/^int main()$/;"	f
+malloc_func	csv.h	/^  void *(*malloc_func)(size_t);$/;"	m	struct:csv_parser
+numsteps	ldrattnapp.h	/^	int numsteps;$/;"	m	struct:calibattr
+openLog	logger.c	/^void openLog()$/;"	f
+options	csv.h	/^  unsigned char options;$/;"	m	struct:csv_parser
+pipefd	ldrattnapp.c	/^int pipefd[2];$/;"	v
+pipefd	ldrattnapp.h	/^	int pipefd;$/;"	m	struct:calibattr
+potImpedence	eepromtest/eeprom.c	/^        unsigned short potImpedence;$/;"	m	struct:__anon11	file:
+potImpedence	ldrattnapp.h	/^	unsigned short potImpedence;$/;"	m	struct:__anon7
+printCalibData	ldrattnapp.c	/^static void printCalibData()$/;"	f	file:
+print_usage	client.c	/^void print_usage()$/;"	f
+pstate	csv.h	/^  int pstate;         \/* Parser state *\/$/;"	m	struct:csv_parser
+pw_SE	eepromtest/eeprom.c	/^        unsigned short pw_SE;            \/\/ series$/;"	m	struct:__anon9	file:
+pw_SE	ldrattnapp.h	/^	unsigned short pw_SE;            \/\/ series$/;"	m	struct:__anon5
+pw_SH	eepromtest/eeprom.c	/^        unsigned short pw_SH;            \/\/ shunt$/;"	m	struct:__anon9	file:
+pw_SH	ldrattnapp.h	/^	unsigned short pw_SH;            \/\/ shunt$/;"	m	struct:__anon5
+quote_char	csv.h	/^  unsigned char quote_char;$/;"	m	struct:csv_parser
+quoted	csv.h	/^  int quoted;         \/* Is the current field a quoted field? *\/$/;"	m	struct:csv_parser
+readCalibData	csvparser.c	/^int readCalibData(char *Fname) $/;"	f
+readHeaders	eeprom.c	/^int readHeaders(char *csvheader,int eepromfd)$/;"	f
+readLDRConfig	ldrattnapp.c	/^static void readLDRConfig()$/;"	f	file:
+readParseCfg	cfgparser.c	/^int readParseCfg()$/;"	f
+read_from_eeprom	eepromtest/eeprom.c	/^static int read_from_eeprom(struct eeprom *e, FILE *fp, int addr, int size, int hex)$/;"	f	file:
+realloc_func	csv.h	/^  void *(*realloc_func)(void *, size_t);$/;"	m	struct:csv_parser
+removespace	cfgparser.c	/^void removespace (char * s)$/;"	f
+rwEEPROMCSV	eeprom.c	/^int rwEEPROMCSV(int offset,char *csvheader,int eepromfd)$/;"	f
+saveCalibration	action.c	/^int saveCalibration()$/;"	f
+series	eepromtest/eeprom.c	/^        unsigned short series;$/;"	m	struct:__anon10	file:
+series	ldrattnapp.h	/^	unsigned short series;$/;"	m	struct:__anon6
+sestep	ldrattnapp.h	/^	int sestep;$/;"	m	struct:calibattr
+setCalibrationRelays	action.c	/^void setCalibrationRelays(unsigned int val) {$/;"	f
+setLSE	action.c	/^int setLSE(int val) $/;"	f
+setLSH	action.c	/^int setLSH(int val) $/;"	f
+setMute	action.c	/^void setMute()$/;"	f
+setRSE	action.c	/^int setRSE(int val) $/;"	f
+setRSH	action.c	/^int setRSH(int val) $/;"	f
+setVolume	action.c	/^void setVolume(int volume)$/;"	f
+set_dac_channel_raw	action.c	/^int set_dac_channel_raw(int channel,int val){$/;"	f
+shstep	ldrattnapp.h	/^	int shstep;$/;"	m	struct:calibattr
+shunt	eepromtest/eeprom.c	/^        unsigned short shunt;$/;"	m	struct:__anon10	file:
+shunt	ldrattnapp.h	/^	unsigned short shunt;$/;"	m	struct:__anon6
+spaces	csv.h	/^  size_t spaces;      \/* Number of continious spaces after quote or in a non-quoted field *\/$/;"	m	struct:csv_parser
+startCalibrationThread	ldrattnapp.c	/^static void startCalibrationThread(unsigned int impedance,unsigned int numsteps,unsigned int temperature)$/;"	f	file:
+startCorrectionThread	ldrattnapp.c	/^static void startCorrectionThread()$/;"	f	file:
+status	csv.h	/^  int status;         \/* Operation status *\/$/;"	m	struct:csv_parser
+status	ldrattnapp.h	/^	int status;$/;"	m	struct:calibattr
+steps	client.c	/^	unsigned int steps;$/;"	m	struct:ldrconf	file:
+stopCalibrationThread	ldrattnapp.c	/^static void stopCalibrationThread()$/;"	f	file:
+stopCorrectionThread	ldrattnapp.c	/^static void stopCorrectionThread()$/;"	f	file:
+storeLDRBuffer	csvparser.c	/^void storeLDRBuffer(int value) {$/;"	f
+storeMaxVolume	action.c	/^void storeMaxVolume(impedance,numsteps)$/;"	f
+storeZeroVolume	action.c	/^void storeZeroVolume(unsigned int impedance)$/;"	f
+sysLogFile	logger.c	/^const char *sysLogFile = "\/var\/log\/ldrattnapp.log";$/;"	v
+targetres	eepromtest/eeprom.c	/^        LDRtargetres targetres[VOL_MAX_STEP - 2];$/;"	m	struct:__anon11	file:
+targetres	ldrattnapp.h	/^	LDRtargetres targetres[VOL_MAX_STEP - 2];$/;"	m	struct:__anon7
+temperature	client.c	/^	unsigned int temperature;$/;"	m	struct:ldrconf	file:
+temperature	ldrattnapp.h	/^	int temperature;$/;"	m	struct:calibattr
+testSetup	action.c	/^int testSetup()$/;"	f
+volume	client.c	/^	unsigned int volume;$/;"	m	struct:ldrconf	file:
+volume	ldrattnapp.h	/^	int volume;$/;"	m	struct:volumeattr
+volume	ldrattnapp.h	/^	unsigned int volume;$/;"	m	struct:__anon8
+volumeattr	ldrattnapp.h	/^struct volumeattr {$/;"	s
+writeCalibData	csvparser.c	/^int writeCalibData(char *Fname,LDRAttr ldrattn_t,int dataflag)$/;"	f
+writeCommand	ltc2655.c	/^void writeCommand (int channel, int command)$/;"	f
+writeDigitalData	ltc2655.c	/^int writeDigitalData (int channel, int val)$/;"	f
+writeLDRConfig	cfgparser.c	/^int writeLDRConfig(char **argc)$/;"	f
+write_cycle_time	eepromtest/eeprom.c	/^        int write_cycle_time;$/;"	m	struct:eeprom	file:
+write_to_eeprom_from_array	eepromtest/eeprom.c	/^int write_to_eeprom_from_array(struct eeprom *e,int addr)$/;"	f
